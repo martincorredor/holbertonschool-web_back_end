@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """Python Module"""
+from typing import List
 
 
-def sum_list(input_list: list[float]) -> float:
-    """takes a list of floats and return their sums as a float"""
-    suma: float = 0
-    for i in input_list:
-        suma = suma + i
-    return suma
+def sum_list(input_list: List[float]) -> float:
+    """Return a float sum"""
+    return(sum(input_list))
