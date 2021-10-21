@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Python Module"""
-from typing import Tuple
+"""Type Checking"""
+from typing import Tuple, List
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
-    zoomed_in: Tuple = [
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """Return a zoom in list from a tuple by a factor of 2"""
+    zoomed_in: List = [
         item for item in lst
         for i in range(factor)
     ]
@@ -13,6 +14,6 @@ def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
 
 array = [12, 72, 91]
 
-zoom_2x = zoom_array(array)
+zoom_2x = zoom_array(tuple(array))
 
-zoom_3x = zoom_array(array, 3.0)
+zoom_3x = zoom_array(tuple(array), int(3.0))
